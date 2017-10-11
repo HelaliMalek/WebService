@@ -24,7 +24,7 @@ namespace LemonWayWebService
     // [System.Web.Script.Services.ScriptService]
     public class WebService : System.Web.Services.WebService
     {
-        static readonly log4net.ILog Logger = log4net.LogManager.GetLogger(typeof(WebService));
+       
         private static string JsonError(string text)
         {
             var jsonRequest = new StringBuilder();
@@ -42,7 +42,7 @@ namespace LemonWayWebService
         }
         private static int GetFibonacci(int n)
         {
-            Logger.Info("Start----Fibonacci");
+           
             if (n < 1 || n > 100) return -1;
             var a = 0;
             var b = 1;
@@ -52,7 +52,7 @@ namespace LemonWayWebService
                 a = b;
                 b = temp + b;
             }
-            Logger.Info("End----Fibonacci");
+         
             return a;
             
         }
